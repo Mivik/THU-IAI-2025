@@ -1,0 +1,5 @@
+image: saiblo-upload:0.0.4
+
+run:
+  script:
+    - saiblo-upload --game "$GAME" --name "~ci~rust~" --repo "$CI_PROJECT_URL" --commit "$CI_COMMIT_SHA" --remark "${CI_COMMIT_TITLE:0:32}" --lang auto --path .

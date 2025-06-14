@@ -1,0 +1,29 @@
+[package]
+name = "tako"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tako"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[dependencies]
+arrayvec = "0.7.6"
+once_cell = "1.21.3"
+ordered-float = "5.0.0"
+rand = { version = "0.8.5", default-features = false, features = ["small_rng"] }
+slab = "0.4.9"
+
+[patch.crates-io]
+arrayvec = { path = "vendor/arrayvec" }
+autocfg ={ path = "vendor/autocfg" }
+num-traits = { path = "vendor/num-traits" }
+once_cell = { path = "vendor/once_cell" }
+ordered-float = { path = "vendor/ordered-float" }
+rand = { path = "vendor/rand" }
+rand_core = { path = "vendor/rand_core" }
+slab = { path = "vendor/slab" }
