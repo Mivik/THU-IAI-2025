@@ -1,0 +1,7 @@
+torch
+gensim
+tqdm
+toml
+pydantic
+matplotlib
+pandas
